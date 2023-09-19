@@ -1,107 +1,90 @@
 #include <stdio.h>
-//#include <math.h>
+#include <math.h>
 
-int main()
-{
-  
-    int max(int x,int y);
-    int add(int m,int n);
-    int mix(int g,int h);
-    //int divide(int j,int k);
-    int a,b,c,d,e,f,g,h,i,l,m,n,p,q,r,s,t,u,v,w,x,y,z;
-    float j,k,o;
-    int key;
-    //¿ªÊ¼Ê±µ¯³ö¿ÉÖ´ĞĞ¹¦ÄÜ
+int main(void) {
 
-    printf("ÊäÈë¡°1¡±ÒÔÅĞ¶ÏÁ½¸öÕûÊı´óĞ¡£¬ÊäÈë¡°2¡±ÒÔÇó³öÁ½ÕûÊıÖ®ºÍ£¬ÊäÈë¡°3¡±ÒÔÇóÁ½ÕûÊıÖ®»ı£¬¨wÊäÈë¡°4¡±ÒÔÇóÁ½ÊıÖ®ÉÌ¨w£¨×¢£ºÁ½ÕûÊı¼äÇëÓÃ°ë½Ç¶ººÅ¼ä¸ô£¬ÊäÈëÍê±ÏºóÇë°´»Ø³µ¼üÒÔÖ´ĞĞÏÂÒ»²½£¬ÇóÉÌÊ±³ıÊı²»ÄÜÎª0£©\n");
-    scanf("%d",&key);
+	int max(int max_input1, int max_input2);
+	int add(int add_input1, int add_input2);
+	int mix(int mix_input1, int mix_input2);
+	int area(int area_input1, int area_input2);
+	int volume(int volume_input1, int volume_input2);
+	int functionkey_1, functionkey_2, cal_input1, cal_input2, cal_output;
 
-    //ÅĞ¶ÏËùÑ¡¹¦ÄÜ
+	//å¼€å§‹æ—¶å¼¹å‡ºå¯æ‰§è¡ŒåŠŸèƒ½
 
-    if(key==1) {
+	printf("ã€ä¸€çº§èœå•ã€‘\nâ‘ è¾“å…¥â€œ1â€ä»¥åˆ¤æ–­ä¸¤ä¸ªæ•´æ•°å¤§å°\nâ‘¡è¾“å…¥â€œ2â€ä»¥æ±‚å‡ºä¸¤æ•´æ•°ä¹‹å’Œ\nâ‘¢è¾“å…¥â€œ3â€ä»¥æ±‚ä¸¤æ•´æ•°ä¹‹ç§¯\nâ‘£è¾“å…¥â€œ4â€ä»¥æ±‚ä½“ç§¯æˆ–é¢ç§¯ï¼ˆè¿›å…¥äºŒçº§èœå•ï¼‰\nï¼ˆæ³¨ï¼šä¸¤æ•´æ•°é—´è¯·ç”¨åŠè§’é€—å·é—´éš”ï¼Œè¾“å…¥å®Œæ¯•åè¯·æŒ‰å›è½¦é”®ä»¥æ‰§è¡Œä¸‹ä¸€æ­¥ï¼Œæ±‚å•†æ—¶é™¤æ•°ä¸èƒ½ä¸º0ï¼‰\n");
+	scanf("%d", &functionkey_1);
 
-        //¹¦ÄÜ1£ºÅĞ¶Ï´óĞ¡£»Êı×Ö£º1
+	//åˆ¤æ–­æ‰€é€‰åŠŸèƒ½
 
-        printf("¿ªÊ¼ÅĞ¶Ï´óĞ¡\n");
-        scanf("%d,%d",&a,&b);
-        c=max(a,b);
-        printf("×î´óÖµÊÇ%d",c);
-    } else if(key==2) {
+	if (functionkey_1 == 1) {
 
-        //¹¦ÄÜ2£ºÇóºÍ£»Êı×Ö£º2
+		//åŠŸèƒ½1ï¼šåˆ¤æ–­å¤§å°ï¼›æ•°å­—ï¼š1
 
-        printf("¿ªÊ¼ÇóºÍ\n");
-        scanf("%d,%d",&a,&b);
-        e=add(a,b);
-        printf("ËùÊäÈëÁ½ÊıÖ®ºÍÎª%d",e);
-    }  else if(key==3) {
+		printf("å¼€å§‹åˆ¤æ–­å¤§å°\n");
+		scanf("%d,%d", &cal_input1, &cal_input2);
+		cal_output = max(cal_input1, cal_input2);
+		printf("æœ€å¤§å€¼æ˜¯%d", cal_output);
+	} else if (functionkey_1 == 2) {
 
-        //¹¦ÄÜ3£ºÇó»ı£»Êı×Ö£º3
+		//åŠŸèƒ½2ï¼šæ±‚å’Œï¼›æ•°å­—ï¼š2
 
-        printf("¿ªÊ¼Çó»ı\n");
-        scanf("%d,%d",&g,&h);
-        i=mix(g,h);
-        printf("ËùÊäÈëÁ½ÊıÖ®»ıÎª%d",i);
-    } 
-    
-    /* else  if(key==4) {
+		printf("å¼€å§‹æ±‚å’Œ\n");
+		scanf("%d,%d", &cal_input1, &cal_input2);
+		cal_output = add(cal_input1, cal_input2);
+		printf("æ‰€è¾“å…¥ä¸¤æ•°ä¹‹å’Œä¸º%d", cal_output);
+	}  else if (functionkey_1 == 3) {
 
-        //¹¦ÄÜ4£ºÇóÉÌ£»Êı×Ö£º4
+		//åŠŸèƒ½3ï¼šæ±‚ç§¯ï¼›æ•°å­—ï¼š3
 
-        printf("¿ªÊ¼ÇóÉÌ\n");
-        scanf("%f,%f",&j,&k);
-        if(k==0) {
-            printf("³ıÊı²»ÄÜÎª0");
-        }
-        return 1;
-        o=divide(j,k);
-        printf("Á½ÊıÖ®ÉÌÎª%f",o);
-    } */
-    else {
+		printf("å¼€å§‹æ±‚ç§¯\n");
+		scanf("%d,%d", &cal_input1, &cal_input2);
+		cal_output = mix(cal_input1, cal_input2);
+		printf("æ‰€è¾“å…¥ä¸¤æ•°ä¹‹ç§¯ä¸º%d", cal_output);
+	} else if (functionkey_1 == 4) {
 
-        //ÊäÈëÆäËûÄÚÈİÌáÊ¾ÎŞ´Ë¹¦ÄÜ
+		//åŠŸèƒ½4ï¼šæ±‚é¢/ä½“ç§¯ï¼›æ•°å­—ï¼š4
 
-        printf("ÎŞ´Ë¹¦ÄÜ");
+		printf("å¼€å§‹æ±‚é¢ç§¯\n");
+		scanf("%d,%d", &cal_input1, &cal_input2);
+		cal_output = area(cal_input1, cal_input2);
+		printf("æ‰€æ±‚é¢ç§¯ä¸º%d", cal_output);
 
-    }
-    return 2;      //int main()ÏÂËæÒâ·µ»ØµÄÒ»¸öÖµ
+	} else {
+
+		//è¾“å…¥å…¶ä»–å†…å®¹æç¤ºæ— æ­¤åŠŸèƒ½
+
+		printf("æ— æ­¤åŠŸèƒ½");
+
+	}
+	return 0;
 }
 
-//º¯Êı¹¦ÄÜÇøÓò
-//¹¦ÄÜ1£ºÅĞ¶Ï´óĞ¡
+//å‡½æ•°åŠŸèƒ½åŒºåŸŸ
+//åŠŸèƒ½1ï¼šåˆ¤æ–­å¤§å°
 
-int max(int x,int y)
-{
-    int z;
-    if (x>y)
-    {
-        z=x;
-    }
-    else {
-        z=y;
-    }
-    return z;
+int max(int max_input1, int max_input2) {
+	int max_output;
+	if (max_input1 > max_input2) {
+		max_output = max_input1;
+	} else {
+		max_output = max_input2;
+	}
+	return max_output;
 }
 
-//¹¦ÄÜ2£ºÇóºÍ
+//åŠŸèƒ½2ï¼šæ±‚å’Œ
 
-int add(int m,int n)
-{
-    return m+n;
+int add(int add_input1, int add_input2) {
+	return add_input1 + add_input2;
 }
 
-//¹¦ÄÜ3£ºÇó»ı
-int mix(int g,int h)
-{
-    return g*h;
+//åŠŸèƒ½3ï¼šæ±‚ç§¯
+int mix(int mix_input1, int mix_input2) {
+	return mix_input1 * mix_input2;
 }
 
-//¹¦ÄÜ4£ºÇóÉÌ
-/* float divide(float j,float k)
-{
-    float Val=j/k;
-    return Val;
+//åŠŸèƒ½4.1ï¼šæ±‚é¢ç§¯
+int area(int area_input1, int area_input2) {
+	return area_input1 * area_input2;
 }
-*/
-    
-
